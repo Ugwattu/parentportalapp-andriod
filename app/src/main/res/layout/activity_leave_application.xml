@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/leave_application"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fbf8ff"
+    tools:context=".LeaveApplication">
+<!--make this sub catagory for leave application create main leave for history and new-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/leave_applicationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fbf8ff"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/leave_application_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize"
+            app:navigationIcon="@drawable/ic_backarrow"
+            app:background="@color/md_theme_surface">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave Application"
+                android:textColor="#16216f"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_application_small"
+                android:drawablePadding="8dp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leave_applicationTitle"
+        android:layout_marginHorizontal="10dp"
+        android:padding="5dp"
+        android:gravity="center_vertical" >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_descriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/leave_descriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leave_descriptionTitle">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/leave_reason"
+                android:hint="State your Reason"
+                android:textSize="14sp"
+                android:padding="15dp"
+                android:gravity="start|top"
+                android:layout_marginBottom="5dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Type"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:layout_below="@id/leave_descriptionText"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:hint="Select"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_below="@+id/leave_type"
+            android:id="@+id/leaveDropdown">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:padding="15dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/autoComplete_leavedropdown"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_fromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/leaveDropdown"
+            android:textSize="12sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/leave_fromDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="YYYY/MM/DD"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/leave_fromDate"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:cornerRadius="5dp"
+            android:padding="15dp"
+            app:icon="@drawable/ic_attendance_small"
+            app:iconTint="#535a92"
+            app:iconGravity="end"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_toDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/leave_fromDatePicker"
+            android:textSize="12sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/leave_toDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="YYYY/MM/DD"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/leave_toDate"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:cornerRadius="5dp"
+            android:padding="15dp"
+            app:icon="@drawable/ic_attendance_small"
+            app:iconTint="#535a92"
+            app:iconGravity="end"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leave_toDatePicker"
+            android:text="Submit"
+            android:textSize="14sp"
+            android:padding="15dp"
+            android:textColor="@color/md_theme_surfaceContainerLowest"
+            android:backgroundTint="@color/md_theme_primary"
+            android:id="@+id/leave_submit_btn" />
+
+    </RelativeLayout>
+</RelativeLayout>

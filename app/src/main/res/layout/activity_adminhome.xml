@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminhome">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/adminHomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true"
+        android:background="@color/md_theme_surfaceBright">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/adminhome_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize"
+            app:title=" "
+            app:menu="@menu/admintop_app_bar"
+            app:labelVisibilityMode="labeled">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:src="@drawable/vu_logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Portal"
+                android:textColor="#16216f"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/adminHomeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/registerStudent_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Register Student"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_studentprofile"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/feeVoucher_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Upload fee voucher"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_feedetail_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/sendNotification_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Send Notification"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_announcement_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/sendDiary_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Send Diary"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_dailydiary_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/sendFeedback_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="FeedBack"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_feedback_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/addSyllabus_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Add Syllabus"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_syllabus_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/checkLeave_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Leave Application"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_application_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/addAttendance_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Attendance Record"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_attendance_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/addTransportDetail_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Transport Detail"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_transport_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/addTimeTable_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Add TimeTable"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_timetable_small"
+                app:iconSize="30dp"/>
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/addReportCard_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:minHeight="90dp"
+                android:layout_margin="8dp"
+                android:paddingVertical="20dp"
+                android:gravity="center"
+                android:text="Report Card"
+                android:backgroundTint="@color/md_theme_surfaceContainerLowest"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="11sp"
+                app:icon="@drawable/ic_reportcard_small"
+                app:iconSize="30dp"/>
+
+        </GridLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminhome">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/registerStudentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true"
+        android:background="@color/md_theme_surfaceBright">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/registerStudent_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize"
+            app:navigationIcon="@drawable/ic_backarrow"
+            app:background="@color/md_theme_surface">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register Student"
+                android:textColor="#16216f"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_studentprofile"
+                android:drawablePadding="5dp" />
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registerStudentTitle">
+
+            <TextView
+                android:id="@+id/StudentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Info"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/md_theme_onSurface"
+                android:layout_margin="5dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/StudentInfo">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Student Name"
+                    android:padding="18dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:id="@+id/studentname_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerStudentDOB"
+                android:layout_below="@id/registerStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Student DOB"
+                    android:padding="18dp"
+                    android:inputType="none"
+                    android:layout_margin="5dp"
+                    android:id="@+id/studentDOB_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerStudentRollno"
+                android:layout_below="@id/registerStudentDOB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Student Roll no"
+                    android:padding="18dp"
+                    android:inputType="none"
+                    android:layout_margin="5dp"
+                    android:id="@+id/studentRollNo_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerStudentClass"
+                android:layout_below="@id/registerStudentRollno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:hint="Enter Student Class">
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="18dp"
+                    android:inputType="none"
+                    android:id="@+id/studentclass_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerStudentSection"
+                android:layout_below="@id/registerStudentClass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Student Section"
+                    android:padding="18dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:id="@+id/studentsection_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/ParentInfo"
+                android:layout_below="@id/registerStudentSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Parent Info"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/md_theme_onSurface"
+                android:layout_margin="5dp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerParentName"
+                android:layout_below="@id/ParentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Parent Name"
+                    android:padding="18dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:id="@+id/parentname_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerParentContact"
+                android:layout_below="@id/registerParentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Parent Contact"
+                    android:padding="18dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:id="@+id/parentcontact_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerParentEmail"
+                android:layout_below="@id/registerParentContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Parent Email"
+                    android:padding="18dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:id="@+id/parentemail_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/registerParentAddress"
+                android:layout_below="@id/registerParentEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Parent Address"
+                    android:padding="18dp"
+                    android:inputType="text"
+                    android:layout_margin="5dp"
+                    android:id="@+id/parentaddress_input" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_below="@id/registerParentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:paddingVertical="18dp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/md_theme_primary"
+                android:layout_margin="5dp"
+                android:id="@+id/registerStudentSave_btn" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

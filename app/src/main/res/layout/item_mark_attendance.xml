@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Horizontal row: Student Info + Switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Student Info -->
+        <RelativeLayout
+            android:id="@+id/mAttendanceRollno_Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingEnd="8dp">
+
+            <TextView
+                android:id="@+id/sRollno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="123"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/studentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Student Name"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_below="@id/sRollno"
+                android:layout_marginTop="2dp" />
+        </RelativeLayout>
+
+        <!-- Attendance Switch -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/attendanceStatus_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Divider -->
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

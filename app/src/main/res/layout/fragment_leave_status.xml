@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/leave_application"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fbf8ff"
+    tools:context=".LeaveApplication">
+    <!--make this sub catagory for leave application create main leave for history and new-->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/leave_applicationTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fbf8ff"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/leave_application_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?actionBarSize"
+            app:navigationIcon="@drawable/ic_close"
+            app:background="@color/md_theme_surface">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leave Details"
+                android:textColor="#16216f"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/ic_application_small"
+                android:drawablePadding="8dp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leave_applicationTitle"
+        android:layout_marginHorizontal="10dp"
+        android:padding="5dp"
+        android:gravity="center_vertical" >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_descriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_onSurface"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/leave_reasonadmin"
+                android:hint="State your Reason"
+                android:textSize="14sp"
+                android:textColor="@color/md_theme_onSurface"
+                android:gravity="start|top"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/leave_descriptionTitle"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_typeadmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Type"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_onSurface"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:layout_below="@id/leave_reasonadmin"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/leave_typetitleadmin"
+                android:hint="Leave Type"
+                android:textSize="14sp"
+                android:textColor="@color/md_theme_onSurface"
+                android:gravity="start|top"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@id/leave_typeadmin"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_fromadmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave From"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_onSurface"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:layout_below="@id/leave_typetitleadmin"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/leave_fromdateadmin"
+            android:hint="From Date"
+            android:textSize="14sp"
+            android:textColor="@color/md_theme_onSurface"
+            android:gravity="start|top"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/leave_fromadmin"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_tilladmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave Till"
+            android:textStyle="bold"
+            android:textColor="@color/md_theme_onSurface"
+            android:layout_marginBottom="5dp"
+            android:textSize="12sp"
+            android:layout_below="@id/leave_fromdateadmin"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/leave_tilldateadmin"
+            android:hint="Till Date"
+            android:textSize="14sp"
+            android:textColor="@color/md_theme_onSurface"
+            android:gravity="start|top"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/leave_tilladmin"/>
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/leave_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leave status"
+            android:textColor="@color/md_theme_onSurface"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:layout_below="@id/leave_tilldateadmin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_below="@+id/leave_status"
+            android:id="@+id/leaveStatusDropdown">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/autoComplete_leavestatusdropdown"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/leaveStatusDropdown"
+            android:text="Submit"
+            android:textSize="14sp"
+            android:padding="15dp"
+            android:textColor="@color/md_theme_surfaceContainerLowest"
+            android:backgroundTint="@color/md_theme_primary"
+            android:id="@+id/leave_submit_btn" />
+
+    </RelativeLayout>
+</RelativeLayout>
