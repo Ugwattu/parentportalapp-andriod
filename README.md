@@ -7,7 +7,7 @@ A comprehensive Android application developed as a **Final year university proje
 ## 🎓 Project Overview
 
 * 🏫 **Final Year BSIT Project**
-* 🧑‍💻 Developed by: \[Umair Ghafoor]
+* 🧑‍💻 Developed by: `Umair Ghafoor`
 * 📅 Year: 2025
 
 ---
